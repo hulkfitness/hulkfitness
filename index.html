@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hulk Fitness Eachur</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="assets/images/title-logo.png" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Catamaran:wght@600;700;800;900&family=Rubik:wght@400;500;800&display=swap"
+    rel="stylesheet">
+
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="./assets/images/hero-banner.png">
+  <link rel="preload" as="image" href="./assets/images/hero-circle-one.png">
+  <link rel="preload" as="image" href="./assets/images/hero-circle-two.png">
+  <link rel="preload" as="image" href="./assets/images/heart-rate.svg">
+  <link rel="preload" as="image" href="./assets/images/calories.svg">
+
+</head>
+
+<body id="top">
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="#" class="logo">
+        <ion-icon name="barbell-sharp" aria-hidden="true"></ion-icon>
+
+        <span class="span" style="margin-left: 11px;"> Hulk Fitness</span>
+      </a>
+
+      <nav class="navbar" data-navbar>
+
+        <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+          <ion-icon name="close-sharp" aria-hidden="true"></ion-icon>
+        </button>
+
+        <ul class="navbar-list">
+
+          <li>
+            <a href="#home" class="navbar-link active" data-nav-link>Home</a>
+          </li>
+
+          <li>
+            <a href="#about" class="navbar-link" data-nav-link>About Us</a>
+          </li>
+
+          <li>
+            <a href="#class" class="navbar-link" data-nav-link>Classes</a>
+          </li>
+
+          <li>
+            <a href="#gallery" class="navbar-link" data-nav-link>Gallery</a>
+          </li>
+
+          <li>
+            <a href="#testimonals" class="navbar-link" data-nav-link>Transformations</a>
+          </li>
+
+          <li>
+            <a href="#contact" class="navbar-link" data-nav-link>Contact Us</a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+      <a href="#contact" class="btn btn-secondary">Join Now</a>
+
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </button>
+
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <!-- <section class="section hero bg-dark has-after has-bg-image" id="home" aria-label="hero" data-section
+        style="background-image: url('./assets/images/hero-bg.png')">
+        <div class="container">
+
+          <div class="hero-content">
+
+            <p class="hero-subtitle">
+              <strong class="strong">The Best</strong>Fitness Club
+            </p>
+
+            <h1 class="h1 hero-title">No Excuses,<br> Just Results</h1>
+
+            <p class="section-text">
+              "The pain you feel today will be the strength you feel tomorrow"
+            </p>
+
+            <a href="#" class="btn btn-primary">Get Started</a>
+
+          </div>
+
+          <div class="hero-banner">
+
+            <img src="./assets/images/hero-banner.png" width="660" height="753" alt="hero banner" class="w-100">
+
+            <img src="./assets/images/hero-circle-one.png" width="666" height="666" aria-hidden="true" alt=""
+              class="circle circle-1">
+            <img src="./assets/images/hero-circle-two.png" width="666" height="666" aria-hidden="true" alt=""
+              class="circle circle-2">
+
+            <img src="./assets/images/heart-rate.svg" width="255" height="270" alt="heart rate"
+              class="abs-img abs-img-1">
+            <img src="./assets/images/calories.svg" width="348" height="224" alt="calories" class="abs-img abs-img-2">
+
+          </div>
+
+        </div>
+      </section> -->
+
+      <section class="hero">
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+          <p class="hero-subtitle">Unleash Your Strength</p>
+          <h1 class="hero-title">
+            No Limits.<span>Only Pure Power.</span>
+          </h1>
+          <p class="hero-text-new">
+            Push beyond your boundaries and achieve the impossible. Start your fitness journey today.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#" class="btn btn-primary">Get Started</a>
+            <a href="#" class="btn btn-secondary">View Plans</a>
+          </div>
+        </div>
+      </section>
+
+
+
+
+
+
+
+      <!-- GYM ABOUT SECTION -->
+      <section class="gym-about-section" id="about">
+        <div class="gym-container">
+          <div class="gym-about-content">
+            <h2 class="gym-section-title">Welcome to Hulk Fitness</h2>
+            <p class="gym-about-text">
+              At Hulk Fitness, we believe in pushing limits and achieving greatness.
+              Whether you're looking to build muscle, lose weight, or improve your overall health,
+              our state-of-the-art facility and expert trainers are here to help you every step of the way.
+            </p>
+            <p class="gym-about-text">
+              Join a community of fitness enthusiasts who are committed to strength, endurance,
+              and personal transformation. Are you ready to transform your life?
+            </p>
+            <a href="#membership" class="gym-btn gym-btn-primary">Join Now</a>
+          </div>
+          <div class="gym-about-image">
+            <img src="./assets/images/logo/logo.jpg" alt="Gym Workout">
+          </div>
+        </div>
+      </section>
+
+
+
+
+
+
+      <!-- 
+        - #VIDEO
+      -->
+
+      <section class="section photo" aria-label="photo">
+        <div class="container">
+
+          <div class="photo-card has-before has-bg-image"
+            style="background-image: url('./assets/images/hulk-members.jpg')">
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #CLASS
+      -->
+
+      <section class="section class bg-dark has-bg-image" id="class" aria-label="class"
+        style="background-image: url('./assets/images/classes-bg.png')">
+        <div class="container">
+
+          <p class="section-subtitle">Our Classes</p>
+
+          <h2 class="h2 section-title text-center" style="font-size: 20px;">Fitness Classes For Every Goal</h2>
+
+          <ul class="class-list has-scrollbar">
+
+            <li class="scrollbar-item">
+              <div class="class-card">
+
+                <figure class="card-banner img-holder" style="--width: 416; --height: 240;">
+                  <img src="./assets/images/gallery/gallery-4.jpg " width="416" height="240" loading="lazy"
+                    alt="Weight Lifting" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="title-wrapper">
+                    <img src="./assets/images/class-icon-1.png" width="52" height="52" aria-hidden="true" alt=""
+                      class="title-icon">
+
+                    <h3 class="h3">
+                      <a href="#" class="card-title">Weight Lifting</a>
+                    </h3>
+                  </div>
+
+                  <p class="card-text">
+                    Weight lifting is a strength-training exercise using weights to build muscle, increase endurance,
+                    and improve fitness, enhancing strength, metabolism, and overall health.
+                  </p>
+
+                  <div class="card-progress">
+
+                    <div class="progress-wrapper">
+                      <p class="progress-label">Class Full</p>
+
+                      <span class="progress-value">85%</span>
+                    </div>
+
+                    <div class="progress-bg">
+                      <div class="progress-bar" style="width: 85%"></div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li class="scrollbar-item">
+              <div class="class-card">
+
+                <figure class="card-banner img-holder" style="--width: 416; --height: 240;">
+                  <img src="./assets/images/gallery/gallery-6.jpg" width="416" height="240" loading="lazy"
+                    alt="Cardio & Strenght" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="title-wrapper">
+                    <img src="./assets/images/class-icon-2.png" width="52" height="52" aria-hidden="true" alt=""
+                      class="title-icon">
+
+                    <h3 class="h3">
+                      <a href="#" class="card-title">Cardio & Strenght</a>
+                    </h3>
+                  </div>
+
+                  <p class="card-text">
+                    Cardio & Strength training combines aerobic exercises to improve heart health with resistance
+                    workouts to build muscle, boost endurance, and enhance overall fitness.
+                  </p>
+
+                  <div class="card-progress">
+
+                    <div class="progress-wrapper">
+                      <p class="progress-label">Class Full</p>
+
+                      <span class="progress-value">70%</span>
+                    </div>
+
+                    <div class="progress-bg">
+                      <div class="progress-bar" style="width: 70%"></div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li class="scrollbar-item">
+              <div class="class-card">
+
+                <figure class="card-banner img-holder" style="--width: 416; --height: 240;">
+                  <img src="./assets/images/gallery/gallery-5.jpg" width="416" height="240" loading="lazy"
+                    alt="Power Yoga" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="title-wrapper">
+                    <img src="./assets/images/class-icon-3.png" width="52" height="52" aria-hidden="true" alt=""
+                      class="title-icon">
+
+                    <h3 class="h3">
+                      <a href="#" class="card-title">Yoga</a>
+                    </h3>
+                  </div>
+
+                  <p class="card-text">
+                    Yoga is a mind-body practice that combines physical postures, breathing exercises, and meditation to
+                    improve flexibility, strength, relaxation, and overall well-being.
+                  </p>
+
+                  <div class="card-progress">
+
+                    <div class="progress-wrapper">
+                      <p class="progress-label">Class Full</p>
+
+                      <span class="progress-value">90%</span>
+                    </div>
+
+                    <div class="progress-bg">
+                      <div class="progress-bar" style="width: 90%"></div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+
+          </ul>
+
+        </div>
+      </section>
+
+    </article>
+
+  </main>
+
+  <!-- BEFORE & AFTER TRANSFORMATION SECTION -->
+  <section class="transformation-section" id="testimonals">
+    <div class="container">
+      <h2 class="section-title text-center">Transformation Stories</h2>
+      <p style="padding: 20px; margin-top: 5px; font-size: 17px; color: lightgreen;"><- Slide to see the transformation
+          -></p>
+      <div class="transformation-wrapper">
+        <div class="before-after">
+          <div class="before-after-image">
+            <img src="./assets/images/testimonals/tra1.png" alt="Before Gym" class="before-img">
+            <img src="./assets/images/testimonals/tra2.png" alt="After Gym" class="after-img">
+            <div class="slider-bar">
+              <div class="slider-handle"></div>
+            </div>
+          </div>
+          <!-- Unique progress bar container -->
+          <div class="unique-progress-bar">
+            <div class="unique-progress-fill"></div>
+          </div>
+          <div class="testimonial-text">
+            <p>"This gym changed my life! The transformation speaks for itself."</p>
+            <h3>- John Doe</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <!-- GYM GALLERY SECTION -->
+  <section class="gym-gallery" id="gallery">
+    <div class="container">
+      <h2 class="section-title text-center">Gym Gallery</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item"><img src="./assets/images/gallery/gallery-1.jpg" alt="Gym Equipment"></div>
+        <div class="gallery-item"><img src="./assets/images/gallery/gallery-2.jpg" alt="Weight Training Area"></div>
+        <div class="gallery-item"><img src="./assets/images/gallery/gallery-3.jpg" alt="Cardio Section"></div>
+        <div class="gallery-item"><img src="./assets/images/gallery/gallery-4.jpg" alt="Group Workout Session"></div>
+        <div class="gallery-item"><img src="./assets/images/gallery/gallery-5.jpg" alt="Gym Interior"></div>
+        <div class="gallery-item"><img src="./assets/images/gallery/gallery-6.jpg" alt="Personal Training"></div>
+        <div class="gallery-item"><img src="./assets/images/gallery/gallery-7.jpg" alt="Personal Training"></div>
+        <div class="gallery-item"><img src="./assets/images/gallery/gallery-8.jpg" alt="Personal Training"></div>
+        <div class="gallery-item"><img src="./assets/images/gallery/gallery-9.jpg" alt="Personal Training"></div>
+      </div>
+    </div>
+  </section>
+  <!-- gallery section end -->
+
+  <!-- <section class="membership-section">
+  <div class="mem-container">
+      <h2 class="mem-section-title">Choose Your Membership Plan</h2>
+      <p class="mem-section-subtitle">Flexible plans for all fitness levels.</p>
+
+      <div class="mem-plans">
+          
+          <div class="mem-plan">
+              <h3>Basic Plan</h3>
+              <p class="mem-price">$20<span>/month</span></p>
+              <ul>
+                  <li>✅ Access to gym</li>
+                  <li>❌ Personal trainer</li>
+                  <li>❌ Group classes</li>
+                  <li>❌ Sauna & Spa</li>
+              </ul>
+              <a href="#" class="mem-btn">Get Started</a>
+          </div>
+
+          
+          <div class="mem-plan popular">
+              <h3>Standard Plan</h3>
+              <p class="mem-price">$40<span>/month</span></p>
+              <ul>
+                  <li>✅ Access to gym</li>
+                  <li>✅ Personal trainer (Limited)</li>
+                  <li>✅ Group classes</li>
+                  <li>❌ Sauna & Spa</li>
+              </ul>
+              <a href="#" class="mem-btn">Get Started</a>
+          </div>
+
+
+          <div class="mem-plan">
+              <h3>Premium Plan</h3>
+              <p class="mem-price">$70<span>/month</span></p>
+              <ul>
+                  <li>✅ Access to gym</li>
+                  <li>✅ Personal trainer</li>
+                  <li>✅ Group classes</li>
+                  <li>✅ Sauna & Spa</li>
+              </ul>
+              <a href="#" class="mem-btn">Get Started</a>
+          </div>
+      </div>
+  </div>
+</section> -->
+
+
+
+  <!-- OUR TRAINERS SECTION -->
+  <section class="trainers-section" id="trainers">
+    <div class="container">
+      <h2 class="section-title text-center" style="font-size: 32px; padding-bottom: 20px;">Meet Our Trainers</h2>
+      <div class="carousel-wrapper">
+        <button class="carousel-btn left" onclick="scrollLeft()">&#10094;</button>
+        <div class="trainers-carousel">
+          <div class="trainer">
+            <img src="./assets/images/trainers/trainer1.jpg" alt="Trainer 1">
+            <h3>Thejus</h3>
+            <p>Fitness Trainer</p>
+          </div>
+          <div class="trainer">
+            <img src="./assets/images/trainers/trainer2.jpg" alt="Trainer 2">
+            <h3>Abhay</h3>
+            <p>Fitness Trainer</p>
+          </div>
+          <div class="trainer">
+            <img src="./assets/images/trainers/trainer3.png" alt="Trainer 3">
+            <h3>Renjith</h3>
+            <p>Fitness Trainer</p>
+          </div>
+          <div class="trainer">
+            <img src="./assets/images/trainers/trainer5.png" alt="Trainer 4">
+            <h3>Anjana</h3>
+            <p>Fitness Trainer</p>
+          </div>
+          <div class="trainer">
+            <img src="./assets/images/trainers/trainer4.jpg" alt="Trainer 4">
+            <h3>Abhinav</h3>
+            <p>Fitness Trainer</p>
+          </div>
+        </div>
+        <button class="carousel-btn right" onclick="scrollRight()">&#10095;</button>
+      </div>
+    </div>
+  </section>
+  <!-- TRAINERS SECTION END -->
+
+
+  <!-- FAQ SECTION -->
+  <section class="faq-section">
+    <div class="faq-container">
+      <h2 class="faq-title">Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <button class="faq-question">What are your gym timings? <span class="faq-icon">+</span></button>
+        <div class="faq-answer">
+          <p>We are open from 6 AM - 10 PM daily, including weekends.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Do you offer personal training? <span class="faq-icon">+</span></button>
+        <div class="faq-answer">
+          <p>Yes! We have certified personal trainers available for customized workout plans.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">What are the membership fees? <span class="faq-icon">+</span></button>
+        <div class="faq-answer">
+          <p>Our plans start at ₹999/month. We also offer quarterly and yearly memberships.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Do you provide diet plans? <span class="faq-icon">+</span></button>
+        <div class="faq-answer">
+          <p>Yes! Our trainers can provide a custom diet plan based on your fitness goals.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- faq section end -->
+
+
+  <!-- CONTACT FORM SECTION -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <h2 class="section-title text-center">Contact Us</h2>
+      <form class="contact-form" method="post" action="https://api.web3forms.com/submit">
+        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- contact form end -->
+
+  <!-- map section -->
+
+  <section class="map-section">
+    <div class="container">
+      <h2>Find Us Here</h2>
+      <p>Visit our gym at the following location and start your fitness journey today!</p>
+      <div class="map-container" id="map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3904.043947052295!2d75.44410707482275!3d11.902028388323641!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba43bafc47423a1%3A0x230f38134a69d13e!2sHulk%20Fitness%20Studio%20%2C%20Eachur!5e0!3m2!1sen!2sin!4v1741115609372!5m2!1sen!2sin"
+          allowfullscreen="" loading="lazy">
+        </iframe>
+      </div>
+    </div>
+  </section>
+  <!-- map section end -->
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+
+    <div class="section footer-top bg-dark has-bg-image" style="background-image: url('./assets/images/footer-bg.png')">
+      <div class="container">
+
+        <div class="footer-brand">
+
+          <a href="#" class="logo">
+            <ion-icon name="barbell-sharp" aria-hidden="true"></ion-icon>
+
+            <span class="span" style="margin-left: 11px;"> Hulk Fitness</span>
+          </a>
+
+          <p class="footer-brand-text">
+            Unleash your inner beast , Elevate your fitness journey with Us
+          </p>
+
+        </div>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title has-before">Our Links</p>
+          </li>
+
+          <li>
+            <a href="#trainers" class="footer-link">Trainers</a>
+          </li>
+
+          <li>
+            <a href="#testimonals" class="footer-link">Transformation</a>
+          </li>
+
+          <li>
+            <a href="#gallery" class="footer-link">Gallery</a>
+          </li>
+
+          <li>
+            <a href="#map" class="footer-link">Location</a>
+          </li>
+
+          <li>
+            <a href="#contact" class="footer-link">Contact Us</a>
+          </li>
+          
+          <li>
+            <a href="https://www.instagram.com/hulkfitness_eachur/" class="footer-link">Contact Us</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title has-before">Contact Us</p>
+          </li>
+
+          <li class="footer-list-item">
+            <div class="icon">
+              <ion-icon name="location" aria-hidden="true"></ion-icon>
+            </div>
+
+            <address class="address footer-link">
+              Eachur (670591) , Kannur
+            </address>
+          </li>
+
+          <li class="footer-list-item">
+            <div class="icon">
+              <ion-icon name="call" aria-hidden="true"></ion-icon>
+            </div>
+
+            <div>
+              <a href="tel:18001213637" class="footer-link">+91 8714399925</a>
+
+              <a href="tel:+915552348765" class="footer-link">+91 8714399926</a>
+            </div>
+          </li>
+
+          <li class="footer-list-item">
+            <div class="icon">
+              <ion-icon name="mail" aria-hidden="true"></ion-icon>
+            </div>
+
+            <div>
+              <a href="mailto:info@fitlife.com" class="footer-link">hulkfitness@gmail.com</a>
+
+              <a href="mailto:services@fitlife.com" class="footer-link">services@hulk.com</a>
+            </div>
+          </li>
+
+        </ul>
+        
+
+        <!-- <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title has-before">Our Newsletter</p>
+          </li>
+
+          <li>
+            <form action="" class="footer-form">
+              <input type="email" name="email_address" aria-label="email" placeholder="Email Address" required
+                class="input-field">
+
+              <button type="submit" class="btn btn-primary" aria-label="Submit">
+                <ion-icon name="chevron-forward-sharp" aria-hidden="true"></ion-icon>
+              </button>
+            </form>
+          </li>
+
+        </ul> -->
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="copyright">
+          Designed by <a href="https://www.instagram.com/wagoncloud" class="copyright-link">Wagoncloud.</a>
+        </p>
+      </div>
+    </div>
+
+  </footer>
+
+
+
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/+918714399926" class="whatsapp-button" target="_blank">
+    <img src="./assets/images/icons/whatsapp-icon.png" alt="WhatsApp">
+  </a>
+
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js" defer></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

@@ -25,11 +25,8 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Catamaran:wght@600;700;800;900&family=Rubik:wght@400;500;800&display=swap"
     rel="stylesheet">
+    <link rel="preload" as="image" href="/assets/images/gym-hero-replace.jpg" type="image/jpeg">
 
-  <!-- 
-    - preload images
-  -->
-  <link rel="preload" as="image" href="./assets/images/gym-hero-replace.jpg">
 
 </head>
 
@@ -101,7 +98,7 @@
 
   <main>
     <article>
-      <section class="hero" style="background: url('../assets/images/gym-hero-replace.jpg') no-repeat center center/cover;">
+      <section class="hero">
         <div class="hero-overlay"></div>
 
         <div class="hero-content">
@@ -617,6 +614,11 @@
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script>
+    const img = new Image();
+    img.src = "assets/images/gym-hero-replace.jpg";
+
+  </script>
 
 </body>
 

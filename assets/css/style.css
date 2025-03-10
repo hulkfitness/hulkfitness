@@ -1670,72 +1670,90 @@ p {
   }
 }
 
-.new-hero {
+/* NEW HERO SECTION STYLES */
+.unique-hero {
   position: relative;
   width: 100%;
-  height: 100vh; /* Takes full screen height */
-  background: url('../images/gallery/gallery-2.jpg') no-repeat center center/cover;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
   text-align: center;
+  overflow: hidden;
+  color: white;
 }
 
-/* Dark Overlay */
-.new-hero::before {
-  content: "";
+.unique-hero-bg {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6); /* Adjust opacity as needed */
+  object-fit: cover;
+  z-index: -1;
 }
 
-/* Hero Content */
-.new-hero-content {
+.unique-hero-content {
   position: relative;
-  z-index: 2;
-  max-width: 800px;
+  z-index: 1;
+  max-width: 600px;
+  padding: 20px;
+  
 }
 
-.new-hero-title {
+.unique-hero-title {
   font-size: 3rem;
   font-weight: bold;
+  font-size: 35px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+
+
+  
 }
 
-.new-hero-subtitle {
-  font-size: 1.5rem;
-  color: #00ff00; /* Green accent */
+.unique-hero-title span {
+  color: #29df00;
 }
 
-/* Buttons */
-.new-hero-buttons {
-  margin-top: 20px;
-
-}
-
-.new-hero-buttons a {
-  text-decoration: none;
-  padding: 12px 24px; /* Adjust padding for button size */
-  margin: 10px;
+.unique-hero-text {
   font-size: 1.2rem;
+  margin-top: 10px;
+  
+}
+
+.unique-hero-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.unique-btn {
+  text-decoration: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: bold;
   border-radius: 5px;
-  display: inline-block; /* Prevents full width */
-  width: auto; /* Ensures button width fits content */
-  min-width: 150px; /* Prevents button from being too small */
-  text-align: center; /* Centers text */
+  transition: 0.3s;
+  display: inline-block;
 }
 
+.unique-btn-primary {
+  background-color: #08862e;
+  color: #fff;
+}
 
-.new-btn-primary {
-  background: #00ff00;
+.unique-btn-primary:hover {
+  background-color: #077015;
+}
+
+.unique-btn-secondary {
+  background-color: white;
+  border: 2px solid white;
   color: black;
 }
 
-.new-btn-secondary {
-  background: white;
-  color: black;
-  border: 2px solid black;
+.unique-btn-secondary:hover {
+  background-color: white;
+  color: #232323;
 }

@@ -205,13 +205,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  const heroSection = document.querySelector(".new-hero");
-  
-  if (!heroSection) {
-      console.error("Hero section not found! Check class names.");
-      return;
-  }
-
-  console.log("New Hero Section Loaded Successfully!");
+  console.log("Hero section loaded!");
 });
-

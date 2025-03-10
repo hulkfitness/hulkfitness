@@ -1,204 +1,110 @@
 'use strict';
 
-
-
 /**
- * add event on element
+ * Utility function to add an event listener to one or multiple elements
  */
-
-const addEventOnElem = function (elem, type, callback) {
-  if (elem.length > 1) {
-    for (let i = 0; i < elem.length; i++) {
-      elem[i].addEventListener(type, callback);
-    }
+const addEventOnElem = (elems, type, callback) => {
+  if (NodeList.prototype.isPrototypeOf(elems)) {
+    elems.forEach(elem => elem.addEventListener(type, callback));
   } else {
-    elem.addEventListener(type, callback);
+    elems.addEventListener(type, callback);
   }
-}
-
-
+};
 
 /**
- * navbar toggle
+ * Navbar toggle
  */
-
 const navbar = document.querySelector("[data-navbar]");
 const navTogglers = document.querySelectorAll("[data-nav-toggler]");
 const navLinks = document.querySelectorAll("[data-nav-link]");
 
-const toggleNavbar = function () { navbar.classList.toggle("active"); }
-
-addEventOnElem(navTogglers, "click", toggleNavbar);
-
-const closeNavbar = function () { navbar.classList.remove("active"); }
-
-addEventOnElem(navLinks, "click", closeNavbar);
-
-
+addEventOnElem(navTogglers, "click", () => navbar.classList.toggle("active"));
+addEventOnElem(navLinks, "click", () => navbar.classList.remove("active"));
 
 /**
- * header & back top btn active
+ * Header & back-to-top button toggle on scroll
  */
-
 const header = document.querySelector("[data-header]");
 const backTopBtn = document.querySelector("[data-back-top-btn]");
 
-window.addEventListener("scroll", function () {
-  if (window.scrollY >= 100) {
-    header.classList.add("active");
-    backTopBtn.classList.add("active");
-  } else {
-    header.classList.remove("active");
-    backTopBtn.classList.remove("active");
-  }
+window.addEventListener("scroll", () => {
+  const isScrolled = window.scrollY >= 100;
+  header.classList.toggle("active", isScrolled);
+  backTopBtn.classList.toggle("active", isScrolled);
 });
 
-
-document.querySelectorAll(".before-after-image").forEach(container => {
-    const beforeImg = container.querySelector(".before-img");
-    const afterImg = container.querySelector(".after-img");
-    const sliderBar = container.querySelector(".slider-bar");
-
-    let isDragging = false;
-
-    sliderBar.addEventListener("mousedown", (e) => {
-        isDragging = true;
-        document.body.style.userSelect = "none"; // Prevent text selection
-    });
-
-    document.addEventListener("mouseup", () => {
-        isDragging = false;
-        document.body.style.userSelect = "auto";
-    });
-
-    document.addEventListener("mousemove", (e) => {
-        if (!isDragging) return;
-
-        let rect = container.getBoundingClientRect();
-        let offsetX = e.clientX - rect.left;
-        let percent = (offsetX / rect.width) * 100;
-
-        if (percent < 0) percent = 0;
-        if (percent > 100) percent = 100;
-
-        beforeImg.style.clipPath = `inset(0 ${100 - percent}% 0 0)`;
-        afterImg.style.clipPath = `inset(0 0 0 ${percent}%)`;
-        sliderBar.style.left = `${percent}%`;
-    });
-
-    // For touch screens
-    sliderBar.addEventListener("touchstart", (e) => {
-        isDragging = true;
-    });
-
-    document.addEventListener("touchend", () => {
-        isDragging = false;
-    });
-
-    document.addEventListener("touchmove", (e) => {
-        if (!isDragging) return;
-
-        let touch = e.touches[0];
-        let rect = container.getBoundingClientRect();
-        let offsetX = touch.clientX - rect.left;
-        let percent = (offsetX / rect.width) * 100;
-
-        if (percent < 0) percent = 0;
-        if (percent > 100) percent = 100;
-
-        beforeImg.style.clipPath = `inset(0 ${100 - percent}% 0 0)`;
-        afterImg.style.clipPath = `inset(0 0 0 ${percent}%)`;
-        sliderBar.style.left = `${percent}%`;
-    });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  const sliderBar = document.querySelector(".slider-bar");
-  const sliderHandle = document.querySelector(".slider-handle");
-  const progressFill = document.querySelector(".unique-progress-fill");
-  const beforeImg = document.querySelector(".before-img");
-  const afterImg = document.querySelector(".after-img");
-  const imageContainer = document.querySelector(".before-after-image");
+/**
+ * Before-After Image Slider
+ */
+const setupBeforeAfterSlider = (container) => {
+  const beforeImg = container.querySelector(".before-img");
+  const afterImg = container.querySelector(".after-img");
+  const sliderBar = container.querySelector(".slider-bar");
 
   let isDragging = false;
 
-  sliderBar.addEventListener("mousedown", function (event) {
+  const updateSlider = (positionX, rect) => {
+    let percent = ((positionX - rect.left) / rect.width) * 100;
+    percent = Math.max(0, Math.min(100, percent));
+    
+    beforeImg.style.clipPath = `inset(0 ${100 - percent}% 0 0)`;
+    afterImg.style.clipPath = `inset(0 0 0 ${percent}%)`;
+    sliderBar.style.left = `${percent}%`;
+  };
+
+  const startDrag = () => {
     isDragging = true;
     document.body.style.userSelect = "none";
-  });
+  };
 
-  document.addEventListener("mouseup", function () {
+  const stopDrag = () => {
     isDragging = false;
     document.body.style.userSelect = "auto";
-  });
+  };
 
-  document.addEventListener("mousemove", function (event) {
+  const moveSlider = (event) => {
     if (!isDragging) return;
+    const rect = container.getBoundingClientRect();
+    const positionX = event.touches ? event.touches[0].clientX : event.clientX;
+    updateSlider(positionX, rect);
+  };
 
-    let rect = imageContainer.getBoundingClientRect(); // Get full image container width
-    let offsetX = event.clientX - rect.left;
-    let percentage = (offsetX / rect.width) * 100;
+  addEventOnElem(sliderBar, "mousedown", startDrag);
+  addEventOnElem(document, "mouseup", stopDrag);
+  addEventOnElem(document, "mousemove", moveSlider);
 
-    if (percentage < 0) percentage = 0;
-    if (percentage > 100) percentage = 100;
+  addEventOnElem(sliderBar, "touchstart", startDrag, { passive: true });
+  addEventOnElem(document, "touchend", stopDrag);
+  addEventOnElem(document, "touchmove", moveSlider, { passive: true });
+};
 
-    beforeImg.style.clipPath = `inset(0 ${100 - percentage}% 0 0)`;
-    afterImg.style.clipPath = `inset(0 0 0 ${percentage}%)`;
-    sliderBar.style.left = `${percentage}%`;
-    progressFill.style.width = `${percentage}%`; // 🔹 Fixed: Uses full image width now
-  });
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".before-after-image").forEach(setupBeforeAfterSlider);
+});
 
-  // Touchscreen support
-  sliderBar.addEventListener("touchstart", function () {
-    isDragging = true;
-  });
-
-  document.addEventListener("touchend", function () {
-    isDragging = false;
-  });
-
-  document.addEventListener("touchmove", function (event) {
-    if (!isDragging) return;
-
-    let touch = event.touches[0];
-    let rect = imageContainer.getBoundingClientRect();
-    let offsetX = touch.clientX - rect.left;
-    let percentage = (offsetX / rect.width) * 100;
-
-    if (percentage < 0) percentage = 0;
-    if (percentage > 100) percentage = 100;
-
-    beforeImg.style.clipPath = `inset(0 ${100 - percentage}% 0 0)`;
-    afterImg.style.clipPath = `inset(0 0 0 ${percentage}%)`;
-    sliderBar.style.left = `${percentage}%`;
-    progressFill.style.width = `${percentage}%`; // 🔹 Fixed: Uses full image width now
+/**
+ * FAQ Accordion
+ */
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".faq-item").forEach(item => {
+    item.querySelector(".faq-question").addEventListener("click", () => {
+      item.classList.toggle("active");
+    });
   });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  const faqItems = document.querySelectorAll(".faq-item");
-
-  faqItems.forEach(item => {
-      const question = item.querySelector(".faq-question");
-
-      question.addEventListener("click", function () {
-          item.classList.toggle("active");
-      });
-  });
-});
-document.addEventListener("DOMContentLoaded", function () {
+/**
+ * Trainers Carousel
+ */
+document.addEventListener("DOMContentLoaded", () => {
   const carousel = document.querySelector(".trainers-carousel");
+  if (!carousel) return;
 
-  if (!carousel) {
-    console.error("Carousel element not found");
-    return;
-  }
-
-  document.querySelector(".left").addEventListener("click", function () {
+  document.querySelector(".left").addEventListener("click", () => {
     carousel.scrollBy({ left: -250, behavior: "smooth" });
   });
 
-  document.querySelector(".right").addEventListener("click", function () {
+  document.querySelector(".right").addEventListener("click", () => {
     carousel.scrollBy({ left: 250, behavior: "smooth" });
   });
 });

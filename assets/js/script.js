@@ -203,10 +203,34 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+
 document.addEventListener("DOMContentLoaded", function () {
-  const element = document.querySelector(".hero");
-  if (element) {
-      element.classList.add("your-class");
+  let heroSection = document.querySelector(".hero"); 
+  let heroTitle = document.querySelector(".hero-title");
+  let heroSubtitle = document.querySelector(".hero-subtitle");
+  let heroText = document.querySelector(".hero-text");
+
+  // Check if elements exist before applying changes
+  if (heroSection) {
+      console.log("Hero section found!");
+      heroSection.classList.add("hero-active");
+  } else {
+      console.error("Element not found! Check if the class exists in the HTML.");
+  }
+
+  if (heroTitle) {
+      heroTitle.style.opacity = "1";
+      heroTitle.style.transform = "translateY(0)";
+  }
+
+  if (heroSubtitle) {
+      heroSubtitle.style.opacity = "1";
+      heroSubtitle.style.transform = "translateY(0)";
+  }
+
+  if (heroText) {
+      heroText.style.opacity = "1";
+      heroText.style.transform = "translateY(0)";
   }
 });
 

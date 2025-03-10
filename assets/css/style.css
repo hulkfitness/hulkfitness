@@ -992,47 +992,6 @@ body {
 
 
 
-  /**
-   * HERO
-   */
-
-  .hero {
-    background-size: contain;
-    text-align: left;
-  }
-
-  .hero::before {
-    content: "";
-    position: absolute;
-    top: -1000px;
-    left: -500px;
-    width: 1500px;
-    height: 1500px;
-    background-image: radial-gradient(circle, var(--coquelicot_20) 20%, transparent 70% 100%);
-    z-index: -1;
-  }
-
-  .hero .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 25px;
-  }
-
-  .hero-content {
-    padding-inline: 0;
-    margin-block-end: 0;
-  }
-
-  .hero-subtitle,
-  .hero .btn { margin-inline: 0; }
-
-  .hero::after {
-    width: 330px;
-    height: 100%;
-    left: auto;
-    right: 0;
-  }
 
 
 

@@ -202,3 +202,11 @@ document.addEventListener("DOMContentLoaded", function () {
     carousel.scrollBy({ left: 250, behavior: "smooth" });
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const element = document.querySelector(".hero");
+  if (element) {
+      element.classList.add("your-class");
+  }
+});
+

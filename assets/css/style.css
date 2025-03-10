@@ -252,7 +252,6 @@ body {
 
 .circle-2 { animation-direction: reverse; }
 
-.hero-subtitle,
 .section-subtitle {
   font-family: var(--ff-catamaran);
   font-weight: var(--fw-700);
@@ -767,8 +766,6 @@ body {
     margin-inline: auto;
   }
 
-  .hero-subtitle,
-  .section-subtitle { font-size: var(--fs-5); }
 
 
 
@@ -780,18 +777,6 @@ body {
     max-width: unset;
     padding-inline: 30px;
   }
-
-
-
-  /**
-   * HERO
-   */
-
-  .hero-content { padding-inline: 40px; }
-
-  .hero-subtitle .strong { padding-block: 6px; }
-
-  .hero::after { height: 340px; }
 
   .abs-img-1 {
     top: 130px;
@@ -874,23 +859,6 @@ body {
   .container { max-width: 720px; }
 
   .scrollbar-item { min-width: calc(50% - 12.5px); }
-
-
-
-  /**
-   * HERO
-   */
-
-  .hero-banner {
-    max-width: max-content;
-    margin-inline: auto;
-  }
-
-  .abs-img-1 {
-    top: 140px;
-    right: 50px;
-  }
-
 
 
   /**
@@ -1704,7 +1672,7 @@ p {
 
 /* Hero Section */
 .hero {
-  background: url('/assets/images/gym-hero-replace.jpg') no-repeat center center/cover !important;
+  background: url('/assets/images/gallery/gallery-2.jpg') no-repeat center center/cover !important;
   position: relative;
   width: 100%;
   height: 100vh;
